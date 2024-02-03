@@ -1,0 +1,12 @@
+{
+	"name": "bathroom",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"scripts": {},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"jquery": "^3.7.1"
+	}
+}
