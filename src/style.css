@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  padding: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  height: 100%;
+}
+body.happy {
+  background-color: #f0f0f0;
+}
+body.unhappy {
+  background-color: yellow;
+}
+body.angry {
+  background-color: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+
+.secondary {
+  margin: 0;
+}
+
+input[type=text] {
+  margin: 5px;
+  padding: 8px;
+  font-size: 16px;
+  width: 250px;
+}
+
+button {
+  max-width: 230px;
+  padding: 15px 30px;
+  font-size: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+button#exportCSV {
+  color: red;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+#timerDisplay, #studentNameDisplay {
+  font-size: 100px;
+  margin: 10px 0;
+  color: #030303;
+}
+
+#catGraphic {
+  max-height: 300px;
+  margin: 20px auto;
+  object-fit: contain;
+}
+#catGraphic.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
