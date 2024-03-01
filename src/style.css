@@ -4,22 +4,24 @@
 
 html {
   height: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 body {
   font-family: Arial, sans-serif;
   text-align: center;
+  margin: none;
+  padding: none;
   height: 100%;
 }
 body.happy {
-  background-color: #f0f0f0;
+  background-color: #ecf0f1;
 }
 body.unhappy {
-  background-color: yellow;
+  background-color: #f1c40f;
 }
 body.angry {
-  background-color: red;
+  background-color: #e74c3c;
 }
 
 .container {
@@ -33,37 +35,49 @@ body.angry {
 .secondary {
   margin: 0;
 }
+.secondary#export {
+  margin-top: auto;
+}
+.secondary.hide {
+  display: none;
+}
 
 input[type=text] {
-  margin: 5px;
-  padding: 8px;
+  padding: 6px;
+  margin: 6px;
   font-size: 16px;
-  width: 250px;
+  width: 15vw;
 }
 
 button {
-  max-width: 230px;
-  padding: 15px 30px;
+  padding: 6px;
+  margin: 6px;
   font-size: 20px;
-  margin: 10px;
   cursor: pointer;
+  color: black;
 }
-button#exportCSV {
-  color: red;
-  margin-top: auto;
+button#toggleTimer {
+  width: calc(30vw + 12px + 6px);
+}
+button#exportCSV, button#resetStorage {
   margin-bottom: 10px;
+  max-width: 230px;
+}
+button#resetStorage {
+  color: red;
 }
 
 #timerDisplay, #studentNameDisplay {
   font-size: 100px;
-  margin: 10px 0;
-  color: #030303;
+  margin: 5px 0;
+  color: black;
 }
 
 #catGraphic {
   max-height: 300px;
-  margin: 20px auto;
+  margin: none;
   object-fit: contain;
+  transition: 0.5s;
 }
 #catGraphic.hide {
   display: none;
