@@ -8,6 +8,7 @@ class Bathroom {
         this.endTime
 
         this.records = []
+        this.queue = []
 
         this.init()
     }
@@ -89,6 +90,13 @@ class Bathroom {
         $('#exportCSV').on('click', () => {
             this.export()
         })
+        $('#resetStorage').on('click', () => {
+            this.reset_storage()
+        })
+        $(document).on('keydown', (e) => {
+            if (!(e.keyCode === 123 && e.shiftKey && e.altKey && e.ctrlKey)) return
+            $('div.secondary#export').toggleClass('hide')
+        })
     }
 
     get currentStudent() {
@@ -99,17 +107,19 @@ class Bathroom {
         return Math.round((new Date() - this.startTime) / 1000)
     }
     get status() {
-        if (this.elapsedSeconds < 6) return 'happy'
-        else if (this.elapsedSeconds < 12) return 'unhappy'
+        if (this.elapsedSeconds < 300) return 'happy'
+        else if (this.elapsedSeconds < 600) return 'unhappy'
         return 'angry'
     }
 
     export() {
         window.open(encodeURI(localStorage.getItem('records')))
     }
+    reset_storage() {
+        this.reset()
+        localStorage.setItem('records', '')
+
+    }
 }
 
-$(document).ready(e => {
-    let a = new Bathroom()
-
-})
+$(document).ready(e => new Bathroom())
