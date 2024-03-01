@@ -12,17 +12,20 @@
 			<div class="secondary">
 				<input type="text" id="firstName" placeholder="First Name" />
 				<input type="text" id="lastName" placeholder="Last Name" />
-				<button id="toggleTimer">Sign Out/In</button>
 			</div>
+			<button id="toggleTimer">Sign Out/In</button>
 			<div id="timerDisplay">00:00</div>
 			<div id="studentNameDisplay"></div>
 			<img
 				id="catGraphic"
 				class="hide"
-				src="content/happy-cat-alpha.png"
+				src="../content/happy-cat-alpha.png"
 				alt="Happy Cat"
 			/>
-			<button id="exportCSV">Export as CSV</button>
+			<div class="secondary hide" id="export">
+				<button id="exportCSV">Export as CSV</button>
+				<button id="resetStorage">Reset Storage</button>
+			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="main.js"></script>
