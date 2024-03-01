@@ -1,15 +1,25 @@
-$happy-color: #f0f0f0
-$unhappy-color: yellow
-$angry-color: red
+$happy-color: #ecf0f1
+$unhappy-color: #f1c40f
+$angry-color: #e74c3c
+$text-color: black
+
+$padding: 6px
+$margin: 6px
 
 *
 	box-sizing: border-box
+
 html
 	height: 100%
-	padding: 20px
+	padding: 10px
+
+
 body
 	font-family: Arial, sans-serif
 	text-align: center
+
+	margin: none
+	padding: none
 
 	height: 100%
 	&.happy
@@ -30,33 +40,43 @@ body
 
 .secondary
 	margin: 0
+	&#export
+		margin-top: auto
+	&.hide
+		display: none
 
 input[type='text']
-	margin: 5px
-	padding: 8px
+	padding: $padding
+	margin: $margin
+
 	font-size: 16px
-	width: 250px
+	width: 15vw
 
 button
-	max-width: 230px
-	padding: 15px 30px
+	padding: $padding
+	margin: $margin
+
 	font-size: 20px
-	margin: 10px
 	cursor: pointer
-	&#exportCSV
-		color: red
-		margin-top: auto
+	color: $text-color
+
+	&#toggleTimer
+		width: calc(30vw + $padding*2 + $margin*1)
+	&#exportCSV, &#resetStorage
 		margin-bottom: 10px
-	
+		max-width: 230px
+	&#resetStorage
+		color: red
 	
 #timerDisplay, #studentNameDisplay
 	font-size: 100px
-	margin: 10px 0
-	color: #030303
+	margin: 5px 0
+	color: $text-color
 
 #catGraphic
 	max-height: 300px
-	margin: 20px auto
+	margin: none
 	object-fit: contain
+	transition: 0.5s
 	&.hide
 		display: none
